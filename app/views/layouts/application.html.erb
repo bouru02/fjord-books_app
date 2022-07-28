@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>BooksApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
+    <header class="l-header">
+        <%= link_to 'ログアウト', 
+        destroy_user_session_path,
+        class: 'dropdown-item',
+        method: :delete
+        %>
+    </header><!-- /.l-header -->
     <%= yield %>
-  </body>
+</body>
+
 </html>
