@@ -12,12 +12,25 @@
 
 <body>
     <header class="l-header">
-        <%= link_to 'ログアウト', 
-        destroy_user_session_path,
-        method: :delete
-        %>
+        <% if user_signed_in? %>
+        <h1 class="l-header--logo"><%= link_to '本一覧', books_path %></h1><!-- /.l-header--logo -->
+        <% end %>
+        <ul class="l-header--list">
+            <% if user_signed_in? %>
+            <li class="l-header--list--item"><%= link_to 'ユーザー一覧', users_path %></li>
+            <!-- /.l-header--list--item -->
+            <li class="l-header--list--item">
+                <%= link_to 'ログアウト', 
+                destroy_user_session_path,
+                method: :delete
+                %>
+            </li><!-- /.l-header--list--item -->
+            <% end %>
+        </ul><!-- /.l-header--list -->
     </header><!-- /.l-header -->
-    <%= yield %>
+    <main class="l-main">
+        <div class="l-container"><%= yield %></div>
+    </main>
 </body>
 
 </html>
