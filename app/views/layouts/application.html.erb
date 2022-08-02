@@ -17,6 +17,7 @@
         <% end %>
         <ul class="l-header--list">
             <% if user_signed_in? %>
+            <li class="l-header--list--item"><%= link_to 'マイページ', user_path(id: @current_user_id) %></li>
             <li class="l-header--list--item"><%= link_to 'ユーザー一覧', users_path %></li>
             <!-- /.l-header--list--item -->
             <li class="l-header--list--item">
