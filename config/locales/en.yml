@@ -41,3 +41,11 @@ en:
       destroy_success: "%{model} was successfully destroyed."
       error: "error prohibited this book from being saved:"
       confirm_destroy: "Are you sure?"
+  books:
+    index:
+      title: 'Books'
+    edit:
+      title: 'Edit Book Info'
+    new:
+      title: 'Create New Book'
+

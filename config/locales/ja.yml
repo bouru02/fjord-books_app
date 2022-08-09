@@ -218,3 +218,10 @@ ja:
     back: "戻る"
     error: "件のエラーによって保存が失敗しました:"
     confirm_destroy: "削除しますか？"
+  books:
+    index:
+      title: '書籍一覧'
+    edit:
+      title: '書籍情報編集ページ'
+    new:
+      title: '新規作成ページ'
