@@ -205,3 +205,16 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  actions:
+    show: "表示"
+    edit: "編集"
+    destroy: "削除"
+    new: "新規作成"
+    update: "更新"
+    edit_success: "%{model}を編集しました"
+    destroy_success: "%{model}を削除しました"
+    new_success: "%{model}を新規作成しました"
+    update_success: "%{model}を更新しました"
+    back: "戻る"
+    error: "件のエラーによって保存が失敗しました:"
+    confirm_destroy: "削除しますか？"
