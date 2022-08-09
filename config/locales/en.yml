@@ -30,4 +30,22 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  actions:
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      new: "Create New"
+      back: "Back"
+      update_success: "%{model} was successfully updated."
+      create_success: "%{model} was successfully created."
+      destroy_success: "%{model} was successfully destroyed."
+      error: "error prohibited this book from being saved:"
+      confirm_destroy: "Are you sure?"
+  books:
+    index:
+      title: 'Books'
+    edit:
+      title: 'Edit Book Info'
+    new:
+      title: 'Create New Book'
+
