@@ -10,14 +10,14 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = 'フォロー'
+    @title = User.human_attribute_name(:follow)
     @user  = User.find(params[:id])
     @users = @user.following.with_attached_avatar.order(:id).page(params[:page])
     render 'show_follow'
   end
 
   def followers
-    @title = 'フォロワー'
+    @title = User.human_attribute_name(:follower)
     @user  = User.find(params[:id])
     @users = @user.followers.with_attached_avatar.order(:id).page(params[:page])
     render 'show_follow'
