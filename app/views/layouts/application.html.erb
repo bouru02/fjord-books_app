@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BooksApp</title>
+
+<head>
+    <title><%= t('views.common.site_title') %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+    <header class="l-header">
+        <% if user_signed_in? %>
+        <h1 class="l-header--logo"><%= link_to t('views.common.site_title'), books_path %></h1><!-- /.l-header--logo -->
+        <ul class="l-header--list">
+            <li class="l-header--list--item"><%= link_to t('views.common.mypage'), user_path(id: current_user.id) %></li>
+            <li class="l-header--list--item"><%= link_to t('views.common.list', name: User.model_name.human), users_path %></li>
+            <!-- /.l-header--list--item -->
+            <li class="l-header--list--item">
+                <%= link_to t('views.common.sign_out'),
+                destroy_user_session_path,
+                method: :delete %>
+            </li><!-- /.l-header--list--item -->
+        </ul><!-- /.l-header--list -->
+        <% end %>
+    </header><!-- /.l-header -->
+    <main class="l-main">
+        <div class="l-container"><%= yield %></div>
+    </main>
+</body>
+
 </html>
