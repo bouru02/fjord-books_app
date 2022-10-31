@@ -34,7 +34,9 @@ group :development, :test do
 end
 
 group :development do
+  gem 'erb_lint', require: false
   gem 'faker'
+  gem 'htmlbeautifier'
   gem 'i18n_generators'
   gem 'letter_opener_web'
   gem 'listen', '~> 3.3'
